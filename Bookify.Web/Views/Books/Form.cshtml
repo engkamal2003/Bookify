@@ -14,7 +14,6 @@
             {
                 <input type="hidden" asp-for="Id" />
             }
-
             <div class="mb-10">
                 <!--begin::Image input-->
                 <div class="image-input image-input-empty" data-kt-image-input="true" style="background-image: url(@(string.IsNullOrEmpty(Model.ImageUrl) ? "/images/image-placeholder.jpg" : Model.ImageThumbnailUrl))">
@@ -48,11 +47,10 @@
                     </span>
                     <!--end::Remove button-->
                 </div>
+                <div class="form-text">Allowed file types: png, jpg, jpeg and cannot be more that 2 MB</div>
                 <span asp-validation-for="Image" class="text-danger d-block"></span>
-                <div class="form-text">Allowed file types: png, jpg, jpeg and cannot be more than 2 MB</div>
                 <!--end::Image input-->
             </div>
-
             <div class="row">
                 <div class="col-md-5">
                     <div class="row">
@@ -143,7 +141,6 @@
                     </div>
                 </div>
             </div>
-            
         </form>
     </div>
     <div class="card-footer">
@@ -160,7 +157,7 @@
 </div>
 
 @section Scripts
-    {
+{
     <script src="~/assets/plugins/tinymce/tinymce.bundle.js"></script>
     <partial name="_ValidationScriptsPartial" />
 }
